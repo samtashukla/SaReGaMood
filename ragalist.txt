@@ -1,0 +1,121 @@
+Raaga	Thaat	Performance Time
+
+Adana	Asavari	Night
+Ahir Bhairav	Bhairav	Morning
+Alhaiya Bilaval
+Amritvarshini
+Asavari		Morning
+Bageshri	Kafi	Night
+Bahar	Kafi	Night
+Bairagi Bhairav	Bhairav	Morning
+Basant	Poorvi	Night
+Basant Mukhari		Morning
+Barwa
+Bhairav	Bhairav	Morning
+Bhairavi	Bhairavi	Any Time
+Bhankar	Bhairav	Morning
+Bhatiyar	Bhairav	Morning
+Bhimpalasi	Kafi	Afternoon
+Bhinna Shadja	Khamaj	Night
+Bhopali
+Bhupal Todi
+Bhoopal Todi	Bhairavi	Morning
+Bhoopali	Kalyan	Evening
+Bibhas
+Bihag	Kalyan	Night
+Bilaskhani Todi	Bhairavi	Morning
+Bilaval
+Bilawal	Bilawal	Morning
+Brindabani Sarang
+Chandani Kedar	Kalyan	Night
+Chandrakaus
+Chandrakauns		Night
+Charukeshi		
+Chhayanat	Kalyan	Night
+Darbari	Asavari	Night
+Darbari Kanada
+Deepak
+Desh	Khamaj	Evening
+Deshkar	Bilawal	Morning
+Desi	Asavari	Morning
+Dhanashree
+Dhani	Kafi	Any Time
+Durga	Bilawal	Night
+Gauri
+Gaud
+Gurjari
+Gara	Khamaj	
+Gaud Malhar	Kafi	Monsoon
+Gaud Saarang	Kalyan	Afternoon
+Gorakh Kalyan	Khamaj	Night
+Gunakri	Bhairav	Morning
+Gurjari Todi	Todi	Morning
+Hamir	Kalyan	Night
+Hameer
+Hem Bihag
+Hansdhwani	Bilawal	Evening
+Hindol	Kalyan	Morning
+Jaijaivanti
+Jaijaiwanti	Khamaj	Night
+JanaSammohini		
+Jaunpuri	Asavari	Morning
+Jhinjhoti	Khamaj	Night
+Jog
+Jogiya	Bhairav	Morning
+Kafi	Kafi	Any Time
+Kalavati	Khamaj	Night
+Kalyani
+Kalingada	Bhairav	Morning
+Kamod	Kalyan	Evening
+Kedar	Kalyan	Night
+Khamaj	Khamaj	Evening
+Kirwani		Night
+Lalit	Poorvi	Morning
+Madhuvanti	Todi	Afternoon
+Madhyamad Sarang	Kafi	Afternoon
+Malgunji	Kafi	Night
+Malhar	Kafi	Night
+Malkauns	Bhairavi	Night
+Malkaush
+Malkauns Pancham	Bhairavi	Night
+Mand	Bilawal	Any Time
+Maru Bihag	Kalyan	Evening
+Marva
+Megh
+Megh Malhar
+Marwa	Marwa	Afternoon
+Miyan Malhar	Kafi	Monsoon
+Multani	Todi	Afternoon
+Nand	Kalyan	Night
+Nat Bhairav	Bhairav	Morning
+Pahadi	Bilawal	Evening
+Patdeep		Afternoon
+Piloo	Kafi	Any Time
+Pilu
+Poorvi	Poorvi	Afternoon
+Purvi
+Puriya	Marwa	Evening
+Puriya Dhanashri	Poorvi	Evening
+Puriya Dhanashree
+Rageshri	Khamaj	Night
+Rageshree
+Ramkali
+Sahana
+Sham Kalyan	Kalyan	Evening
+Shankara	Bilawal	Evening
+Shivranjani	Kafi	Night
+Shree
+Shri	Poorvi	Afternoon
+Shuddh Kalyan	Kalyan	Evening
+Shuddh Sarang	Kalyan	Afternoon
+Sindhu Bhairavi
+Sohni	Marwa	Morning
+Sorath
+Tilak Kamod	Khamaj	Night
+Tilang	Khamaj	Evening
+Todi	Todi	Morning
+Vibhas	Bhairav	Morning
+Vasant
+Vrindavani Sarang	Kafi	
+Yaman	Kalyan	Evening
+Yaman Kalyan	Kalyan	Evening

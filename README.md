@@ -15,3 +15,4 @@ Model is validated in Ipython notebook "Validation" along with two .py files tha
 
 To know more about the project, [read here](http://saregamoodblog.herokuapp.com/blog). 
 To use the App, [go here](http://saregamoodblog.herokuapp.com/). Note that you would need a Spotify account for using the App.
+ 

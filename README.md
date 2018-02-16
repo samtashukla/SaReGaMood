@@ -7,10 +7,11 @@ This project can be partitioned in four parts:
 (3) developing models
 (4) validating models
 
-Most of the database creation is based on PostgreSQL and teh code of this is a separate .py file for each functionality.
-For EDA, the ipython notebooks "Exploratory Data Analyis" and "Understanding Bias" would suffice. 
+The database is created on PostgreSQL and the code used for this are separate .py files, one for each functionality.
+For someone who is interested in data sceince part of things, they can ignore the databse creation part.
+For EDA, the IPython notebooks "Exploratory Data Analyis" and "Understanding Bias" would suffice. 
 Models are developed and analyzed in IPython notebook "Unsupervised Clustering." 
 Model is validated in Ipython notebook "Validation" along with two .py files that encode survey generated data.
 
 To know more about the project, [read here](http://saregamoodblog.herokuapp.com/blog). 
-To use the App, [go here](http://saregamoodblog.herokuapp.com/). Note that you would need a Spotify account for this.
+To use the App, [go here](http://saregamoodblog.herokuapp.com/). Note that you would need a Spotify account for using the App.

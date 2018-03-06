@@ -1,5 +1,5 @@
 # SaReGaMood
-Mood-based playlist recommender for Indian Classical Music 
+_Mood-based playlist recommender for Indian Classical Music_
 
 This project can be partitioned in four parts:
 (1) database creation
@@ -7,7 +7,8 @@ This project can be partitioned in four parts:
 (3) developing models
 (4) validating models
 
-The database is created on PostgreSQL and the code used for this are separate .py files, one for each functionality. To know more, read README_DB to understand the flow.
+The database is created on PostgreSQL and the code used for this are separate .py files, one for each functionality. To know more, read README_DB to understand the flow.  
+
 If you are interested in data science, then you can ignore the databse creation part.
 For EDA, the IPython notebooks "Exploratory Data Analyis" and "Understanding Bias" would suffice. 
 Models are developed and analyzed in IPython notebook "Unsupervised Clustering." 

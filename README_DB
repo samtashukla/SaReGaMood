@@ -1,0 +1,33 @@
+The aim of this development is to create a database system of music tracks to be used for
+analytics purpose. The database tables I will build are:
+1. alltracks: consists "administrative info" of all the tracks, by which I mean track name,
+track id, track url, artist name, etc.
+2. featuredb: consists of "audio features-related info" of tracks obtained from spotify and gracenote,
+by which I mean tempo, rhythm, key, valence, mood, etc. It also contains some basic administrative
+info of each track (name, id, url) to cross-reference the tracks.
+3. ragafeaturedb: consists of "audio features-related info" of only those tracks (the ones that are based on ragas) that I will use in my analysis. This is a filtered version of featuredb. Filtering is done based on keywords corresponding
+to the names of ragas in Indian Classical Music (from ragalist.txt)
+
+I use psycopg, pandas for database related work. I use spotipy and some functions borrowed from pygn
+for the backend of spotify and gracenote I/O.
+
+File structure
+ |- defs.py : contains some global definitions and classes for spotify and gracenote client
+ |- dbutils.py: contains utility functions for managing database handles
+ |- utils.py: contains utility functions mostly for spotify I/O and gracenote I/O (and some others)
+ |- prepare_db.py: contains function to create and fill database tables
+
+For this code to work, a user needs
+1. Apropriate authorizations from spotify and gracenote (to be pasted in defs.py under SpotipyClient and GracenoteClient).
+2. There should be a database already created under which I can create tables. Right now I assume name "testdb" and
+rolename for database as "spotify". These need to be modified appropriately for each user. This database and rolename will
+be used for managing database handles and transactions.
+2. Some playlist ids whenever functions need them.
+
+Under normal operations given the above prerequisites:
+1. A user will create master database table "alltracks" and add tracks to it
+2. Followed by creating "featuredb" and adding audio features to it for all tracks from "alltracks"
+3. Followed by creating "ragafeaturedb"
+4. Followed by filtering "featuredb" to insert rows in "ragafeaturedb" whenever the track name contains keywords corresponding to ragas.
+
+For an example, see main function (if __name__ == "__main__") in prepare_db.py

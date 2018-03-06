@@ -1,37 +1,45 @@
 import sys
 import spotipy
 import spotipy.util as sputil
-#from spotipy.oauth2 import SpotifyClientCredentials
+from defs import SpotipyClient
+import dbutils
+import pandas as pd
+import time
+import utils
 
-client_id="eaf61ee280c745fa919ec70c278c56bd"
-client_secret="b3a7c3030e534a6399da0b2f6461d3a0"
-#client_credentials_manager = SpotifyClientCredentials(client_id=client_id, client_secret=client_secret)
-#sp = spotipy.Spotify(client_credentials_manager=client_credentials_manager)
 
-username = 'onkarbhardwaj'
+def add_mood_tracks_to_mood_playlists(sp, con):
+    mooddict = {
+            "Peaceful": "0AqPGT2UOtlnTfr0dPtwwD", "Romantic": "76oMVdvVaEQJMx6PpmpLAF",
+            "Sentimental":"7HPD7jNAjvzgE0qB7UvCZX", "Tender": "1qMVuZvXTjCifhUsRrO6SZ",
+            "Easygoing": "3fetVyO0ez8UNRRPXyWFfV", "Yearning": "37NGlcT5IFKBEohRV7JKbo",
+            "Sophisticated": "0fzoJwJ3aRUF6gEAJPzPYU", "Sensual": "1nVMTMWQkngR6X9IlBLeCB", "Cool": "15llrn1mLCeV0NO3qh4Btg",
+            "Gritty": "3GsKdN5Mmj43pixuoNMXfE", "Somber":"3JzqINleWYbQZVZ9H4w7t2",
+            "Melancholy":"7BuPDRmPYF9Z7Q25DonbMn", "Serious":"39YsYl7NLkprJ8NPbKkZmS",
+            "Brooding":"0fo7iTdERRmvJRLEMW737h", "Fiery":"7dHlxRExo3dNtkwu2UMEPZ",
+            "Urgent":"1zgL8fh9YipChpUKhMndwm", "Defiant":"5Fi5DesfV5j0rtvL5TpHNu",
+            "Aggressive":"3rCFT0DPdApQgo93sVKndj", "Rowdy":"3iTmAvGPfuLWiHxQDHpTLY",
+            "Excited":"5q3S544x7amHfTWF1ZvDpd", "Energizing":"3I66czUY5Fa80V4PubxFd3",
+            "Empowering":"6uhdhSIEhHCkAS3Y1P3o6n", "Stirring":"3g5O2RpkTUl9Zf6ai4aOnW",
+            "Lively":"0HWMXqh4VuHnb9nFS8El5j", "Upbeat":"4NYh5KcBrbw8LSJDVGduc1", "Other":"6xAXePNCYBID238rNPKxrp"}
 
-scope = 'playlist-modify-private'
-#token = sputil.prompt_for_user_token(username, scope)
+    mooddict = {"Aggressive":"3rCFT0DPdApQgo93sVKndj"}
 
-#token = sputil.prompt_for_user_token(username = username, 
-#                                   scope = scope, 
-#                                   client_id = client_id, 
-#                                   client_secret = client_secret)
+    for mood in mooddict.keys():
+        playlist_id = mooddict[mood]
+        querystring = "select id from ragafeaturedb WHERE gn_mood_1 like \'" + mood + "\'"
+        df = dbutils.query_db_translate_to_pandas(con, querystring)
+        print("Number of tracks to be added to " + mood + " = ", df.shape)
+        tracklist = df['id'].tolist()
+        utils.add_tracks_to_playlist_id(sp, playlist_id, tracklist)
 
-#if token:
-token="BQD8ATZE49WlXQp43Socz_NYTD8tbzbMB1QFEVhdjjm0GfxFPExzglfKt9YO8-5Py6wFmpauGNaMMm6bOCsHX8LK7pVuCM8o7oq49_uhomz-57ULjhYdjUqnRQ4vn9bTcZonjl_lcbLlCHz6tbRjf8E1pstex3qDK0r_pIZrZWe7IMpz0fu0EjPs5DfJ6Xgex8UTa7b7XBFTiwRt"
-sp = spotipy.Spotify(auth=token)
-sp.trace = False
-playlist_id = "1m3x5wUepl5nj3Oxzc0rvT"
-with open("track-ids.txt", "r") as fh:
-    track_ids=[]
-    for line in fh:
-        tid=line.rstrip()
-        track_ids.append(tid)
-    numtracks = len(track_ids)
-    chunksize = 50
-    for offset in [i for i in range(0, numtracks, chunksize)]:
-        listslice = track_ids[offset:offset+chunksize]
-        results = sp.user_playlist_add_tracks(username, playlist_id, listslice)
-        #results = sp.user_playlist_add_tracks(username, playlist_id, track_ids)
-        print(results)
+
+if __name__ == "__main__":
+
+    con = dbutils.get_db_handle()
+    sp = SpotipyClient()
+    print(sp.auth)
+
+    add_mood_tracks_to_mood_playlists(sp, con)
+
+    dbutils.close_db(con)
